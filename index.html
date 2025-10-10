@@ -8,21 +8,22 @@
 <body>
     <script>
 /**
- * Returns an array containing the lengths of each string in a specified array of strings.
+ * Checks if all strings in an array have the same length.
  *
- * @param {string[]} arr - The input array.
- * @return {number[]} - The array of string lengths.
+ * @param {string[]} arr - The array of strings to be checked.
+ * @return {boolean} - True if all strings have the same length, false otherwise.
  *
  * @example
- *    getStringsLength([ '', 'a', 'bc', 'def', 'ghij' ]) => [ 0, 1, 2, 3, 4 ]
- *    getStringsLength([ 'angular', 'react', 'ember' ]) => [ 7, 5, 5 ]
+ *    isSameLength(['orange', 'banana', 'cherry']) => true
+ *    isSameLength(['cat', 'dog', 'elephant']) => false
  */
-        function getStringsLength(arr) {
-            const newArr = arr.map(item => item.length)
-            console.log(newArr);
-        }
-        getStringsLength([ '', 'a', 'bc', 'def', 'ghij' ]);
-getStringsLength([ 'angular', 'react', 'ember' ]);
+function isSameLength(arr) {
+    const etalon = arr[0].length;
+    const newArr = arr.filter(item => item.length !== etalon);
+    console.log(!(newArr.length > 0));  
+}
+isSameLength(['orange', 'banana', 'cherry']);
+isSameLength(['cat', 'dog', 'elephant']);
     </script>
     
 </body>
