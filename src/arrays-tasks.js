@@ -66,7 +66,7 @@ function sumArrays(arr1, arr2) {
  */
 function findElement(arr, value) {
   const index = arr.indexOf(value);
-  return index;  
+  return index;
 }
 
 /**
@@ -84,7 +84,7 @@ function findElement(arr, value) {
  *    findAllOccurrences([ true, 0, 1, 'true' ], true) => 1
  */
 function findAllOccurrences(arr, item) {
-  const newArr = arr.filter(i => i === item);
+  const newArr = arr.filter((i) => i === item);
   return newArr.length;
 }
 
@@ -101,8 +101,8 @@ function findAllOccurrences(arr, item) {
  *    removeFalsyValues([ false, 0, NaN, '', undefined ]) => [ ]
  */
 function removeFalsyValues(arr) {
-  const newArr = arr.filter(item => item);
-  return newArr;  
+  const newArr = arr.filter((item) => item);
+  return newArr;
 }
 
 /**
@@ -116,7 +116,7 @@ function removeFalsyValues(arr) {
  *    getStringsLength([ 'angular', 'react', 'ember' ]) => [ 7, 5, 5 ]
  */
 function getStringsLength(arr) {
-  const newArr = arr.map(item => item.length)
+  const newArr = arr.map((item) => item.length);
   return newArr;
 }
 
@@ -136,10 +136,10 @@ function getStringsLength(arr) {
  */
 function getAverage(arr) {
   if (arr.length === 0) {
-      return 0;
+    return 0;
   }
   const sumItems = arr.reduce((sum, inicial) => sum + inicial, 0);
-  const average = sumItems/arr.length;
+  const average = sumItems / arr.length;
   const result = +average.toFixed(2);
 
   return result;
@@ -157,8 +157,9 @@ function getAverage(arr) {
  */
 function isSameLength(arr) {
   const etalon = arr[0].length;
-  const newArr = arr.filter(item => item.length !== etalon);
-  return !(newArr.length > 0);
+  // const newArr = arr.filter((item) => item.length !== etalon);
+  // return !(newArr.length > 0);
+  return arr.every((item) => item.length === etalon);
 }
 
 /**
