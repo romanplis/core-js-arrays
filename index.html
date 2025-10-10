@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/**
+ * Returns an array containing the lengths of each string in a specified array of strings.
+ *
+ * @param {string[]} arr - The input array.
+ * @return {number[]} - The array of string lengths.
+ *
+ * @example
+ *    getStringsLength([ '', 'a', 'bc', 'def', 'ghij' ]) => [ 0, 1, 2, 3, 4 ]
+ *    getStringsLength([ 'angular', 'react', 'ember' ]) => [ 7, 5, 5 ]
+ */
+        function getStringsLength(arr) {
+            const newArr = arr.map(item => item.length)
+            console.log(newArr);
+        }
+        getStringsLength([ '', 'a', 'bc', 'def', 'ghij' ]);
+getStringsLength([ 'angular', 'react', 'ember' ]);
+    </script>
+    
+</body>
+</html>
